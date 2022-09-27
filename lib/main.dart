@@ -24,13 +24,13 @@ class MyApp extends StatelessWidget {
                   // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
                   final Uri _urlPaser = Uri(
                     scheme: 'https',
-                    host: 'play.google.com',
-                    path: 'store/apps/details',
-                    queryParameters: {"id": 'com.google.android.tts'},
+                    host: 'goo.gl',
+                    path: 'maps/GiqCXY8Q7ojiZxQm6',
+                    // queryParameters: {"id": 'com.google.android.tts'},
                   );
 
                   if (await canLaunchUrl(_urlPaser)) {
-                    launchUrl(_urlPaser);
+                    launchUrl(_urlPaser, mode: LaunchMode.externalApplication);
                   }
                 },
                 titulo: 'HTTP:',
