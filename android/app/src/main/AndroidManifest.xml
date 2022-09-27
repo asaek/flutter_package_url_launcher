@@ -1,20 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.launch_url">
     <queries>
-    <!-- If your app checks for SMS support -->
-    <intent>
-        <action android:name="android.intent.action.VIEW" />
-        <data android:scheme="sms" />
-    </intent>
-    <!-- If your app checks for call support -->
-    <intent>
-        <action android:name="android.intent.action.VIEW" />
-        <data android:scheme="tel" />
-    </intent>
-    <intent>
-        <action android:name="android.intent.action.VIEW" />
-        <data android:scheme="https" />
-    </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="sms" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tel" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
     </queries>
    <application
         android:label="launch_url"

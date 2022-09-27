@@ -16,85 +16,87 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Material App Bar'),
         ),
-        body: Column(
-          children: [
-            _Boton(
-              precioname: () async {
-                // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
-                final Uri _urlPaser = Uri(
-                  scheme: 'https',
-                  host: 'play.google.com',
-                  path: 'store/apps/details',
-                  queryParameters: {"id": 'com.google.android.tts'},
-                );
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              _Boton(
+                precioname: () async {
+                  // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
+                  final Uri _urlPaser = Uri(
+                    scheme: 'https',
+                    host: 'play.google.com',
+                    path: 'store/apps/details',
+                    queryParameters: {"id": 'com.google.android.tts'},
+                  );
 
-                if (await canLaunchUrl(_urlPaser)) {
-                  launchUrl(_urlPaser);
-                }
-              },
-              titulo: 'HTTP:',
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            _Boton(
-              precioname: () async {
-                final _urlPaser = Uri.parse('sms:5550101234');
+                  if (await canLaunchUrl(_urlPaser)) {
+                    launchUrl(_urlPaser);
+                  }
+                },
+                titulo: 'HTTP:',
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              _Boton(
+                precioname: () async {
+                  final _urlPaser = Uri.parse('sms:5550101234');
 
-                if (await canLaunchUrl(_urlPaser)) {
-                  launchUrl(_urlPaser);
-                }
-              },
-              titulo: 'SMS:',
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            _Boton(
-              precioname: () async {
-                final _urlPaser = Uri.parse('tel:+1 555 010 999');
+                  if (await canLaunchUrl(_urlPaser)) {
+                    launchUrl(_urlPaser);
+                  }
+                },
+                titulo: 'SMS:',
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              _Boton(
+                precioname: () async {
+                  final _urlPaser = Uri.parse('tel:+1 555 010 999');
 
-                if (await canLaunchUrl(_urlPaser)) {
-                  launchUrl(_urlPaser);
-                }
-              },
-              titulo: 'TEL:',
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            _Boton(
-              precioname: () async {
-                // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
-                final _urlPaser = Uri(
-                  scheme: 'mailto',
-                  path: 'dev-yakuza@gmail.com',
-                  query: 'subject=Hello&body=Test',
-                );
+                  if (await canLaunchUrl(_urlPaser)) {
+                    launchUrl(_urlPaser);
+                  }
+                },
+                titulo: 'TEL:',
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              _Boton(
+                precioname: () async {
+                  // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
+                  final _urlPaser = Uri(
+                    scheme: 'mailto',
+                    path: 'dev-yakuza@gmail.com',
+                    query: 'subject=Hello&body=Test',
+                  );
 
-                if (await canLaunchUrl(_urlPaser)) {
-                  launchUrl(_urlPaser);
-                }
-              },
-              titulo: 'MAIL:',
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            _Boton(
-              precioname: () async {
-                // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
-                final _urlPaser = Uri.parse(
-                  'https://dev-yakuza.posstree.com/en/',
-                );
+                  if (await canLaunchUrl(_urlPaser)) {
+                    launchUrl(_urlPaser);
+                  }
+                },
+                titulo: 'MAIL:',
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              _Boton(
+                precioname: () async {
+                  // https://goo.gl/maps/GiqCXY8Q7ojiZxQm6
+                  final _urlPaser = Uri.parse(
+                    'https://dev-yakuza.posstree.com/en/',
+                  );
 
-                if (await canLaunchUrl(_urlPaser)) {
-                  launchUrl(_urlPaser);
-                }
-              },
-              titulo: 'HTTP pelona:',
-            ),
-          ],
+                  if (await canLaunchUrl(_urlPaser)) {
+                    launchUrl(_urlPaser);
+                  }
+                },
+                titulo: 'HTTP pelona:',
+              ),
+            ],
+          ),
         ),
       ),
     );
